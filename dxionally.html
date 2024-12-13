@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="google-site-verification" content="ShvxK6TfB8SWA4PSR-GXJff4OzbRuqs2LHqcLpEKcNE" />
+  <title>DXionally A.I. - A dictionary to play.</title>
+  <meta name="description" content="DXionallyは、発音機能とリスニングクイズを備えたインタラクティブな英和辞書です。必須語500～4000語ジャンプ機能を有し、効果的に英語自習をサポートします。">
+  <meta name="keywords" content="英和辞書, 英語学習, 発音, リスニングクイズ, 単語帳, 必須語">
+  <link rel="canonical" href="https://www7b.biglobe.ne.jp/~nanyo/dxionally.html">
+  <meta property="og:title" content="DXionally - しゃべる、遊べる英和辞書">
+  <meta property="og:description" content="DXionallyは、発音機能とリスニングクイズを備えたインタラクティブな英和辞書です。必須語500～4000語ジャンプ機能を有し、効果的に英語自習をサポートします。">
+  <meta property="og:url" content="https://www7b.biglobe.ne.jp/~nanyo/dxionally.html">
+</head>
+
+<body>
+  <div class="top-bar">
+    <input type="text" id="wordInput" placeholder="Enter a word">
+    <button onclick="changeByUserInputWord()">DXionally!</button>
+  </div>
+  <div class="buttons-row">
+    <button title="Go random, most essential 500words!" class="r500">Random500</button>
+    <button title="Go random, most essential 1000words!" class="r1000">1000</button>
+    <button title="Go random, most essential 2000words!" class="r2000">2000</button>
+    <button title="Go random, most essential 4000words!" class="r4000">4000</button>
+  </div>
+
+  <div id="wordContent" class="wordContent"></div>
+
+  <template id="wordInfoTemplate">
+    <div id="wordHead">
+      <h1 class="word-title"><span class="word"></span> <span class="phonetic"></span></h1>    </div>
+    <div class="meanings"></div>
+  </template>
+
+  <template id="meaningTemplate">
+    <h3></h3>
+    <div class="definitions"></div>
+  </template>
+
+<template id="definitionTemplate">
+  <div class="definition"><span class="d-prefix"> -> </span>
+  <span class="definition-text"> - </span><br>
+  <span class="definition-translated"></span>
+  </div>
+  <div class="example-pHolder"></div>
+</template>
+
+<template id="exampleTemplate"><div class="example">
+  <div class="sentenseContainer"></div>
+  <div class="answer"></div>
+  <div class="answer-translated"></div>
+  <div class="wordButtonsContainer"></div>
+  <div class="buttons-container">
+    <a class="listen-button" data-speed="1.0">Listen</a> -
+    <a class="slow-button" data-speed="0.7">Slow</a> -
+    <a class="slower-button" data-speed="0.5">Slower</a> |
+    <a class="translate-button">Translate</a> |
+    <a class="show-button">Reveal</a> |
+    <a class="gemini" title="Ask Gemini to make an example sentense">Reload</a>
+  </div>
+</div>
+</template>
+
+<footer>
+  <select id="langSelector">
+    <option value="ja">Japanese</option>
+    <option value="es">Spanish</option>
+    <option value="zh">Chinese (Smpl.)</option>
+    <option value="zh-Hant">Chinese (Hant.)</option>
+    <option value="it">Italian</option>
+    <option value="id">Indonesian</option>
+    <option value="hi">Hindi</option>
+  </select>
+DXionally A.I., by Nanyo G.K. <a href="about.html">[help]</a>
+</footer>
+  <script src="words.js"></script>
+  <script src="vscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+:root {
+  font-size: 18px;
+}
+
+.definition {
+  margin-top: 25px; /* Adjust the value as needed */
+}
+
+.sentenseContainer {
+  margin: 5px;
+  font-size: 1.3rem;
+}
+
+.answer {
+  display:none; /* Hidden by Default */
+  font-size: 1.3rem;
+}
+
+.example {
+  border-radius: 10px; /* Adjust the value for desired roundness */
+  background-color: LightYellow;
+  padding: 20px;
+  position: relative;
+  transition: background-color 0.8s ease; /* Add transition for background color change */
+  display: flex;           /* Enable flexbox for the example container */
+  flex-direction: column;  /* Stack elements vertically */
+}
+
+.example.complete {
+  background-color: #c7f0b6; /* Friendly green */
+}
+
+.example button { /* Style for word buttons */
+  background-color: #f0f0e0; /* Soft color */
+  color: #333; /* Dark text for contrast */
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  margin: 0.4rem; /* 10px */
+  font-size: 1.1rem; /* Use relative font size */
+  touch-action: manipulation; /* Improve touch responsiveness */
+  pointer-events: auto; /* Ensure buttons are interactive */
+}
+
+.wordButton:disabled {
+  /* Style for disabled buttons */
+  opacity: 0.5;
+  cursor: default;
+}
+
+.wordButtonsContainer {
+  margin: 8px;
+}
+
+.example .buttons-container a { /* Style for Listen/Clear buttons */
+  background-color: DodgerBlue;
+  color: white;
+  border: none;
+  padding: 0.3125rem 0.625rem; /* 5px 10px */
+  cursor: pointer;
+  margin: 5px;
+  font-size: 1rem; /* Use relative font size */
+}
+
+.example .buttons-container {
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  white-space: normal;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+body {
+  font-family: Roboto, sans-serif; /* Use Roboto font */
+  margin: 0; /* Remove default body margin */
+}
+
+.definition-translated {
+  color: #777; /* Or any other shade of grey you prefer */
+}
+.answer-translated {
+  color: #777; /* Or any other shade of grey you prefer */
+}
+
+footer {
+  background-color: lightsteelblue; /* Match top-bar color */
+  text-align: right;
+  padding: 14px;
+}
+
+input[type="text"] {
+  font-size: 1.2rem;
+  padding: 0.625rem; /* 10px */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.625rem; /* 10px */
+}
+
+button {
+  background-color: DodgerBlue;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+}
+
+
+.top-bar {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  flex-wrap: nowrap; /* Prevent vertical wrapping */
+  padding: 5px;
+  background-color: lightsteelblue; /* Light gray background */
+  margin: 0px;
+}
+
+.top-bar input[type="text"] {
+  flex-grow: 1;
+  margin-right: 0px;
+  min-width: 0; /* Prevent input from taking up excessive space */
+}
+
+.top-bar button {
+  margin-left: 1px; /* Add margin between buttons */
+  font-size: 1.1rem;
+  white-space: nowrap; /* Prevent the button text from wrapping */
+}
+
+.buttons-row {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons equally */
+  width: 100%;
+  margin-top: 5px; /* Add spacing above the buttons */
+}
+
+.buttons-row button {
+  width: calc(25% - 10px); /* Equal width with some margin */
+  margin: 0 5px; /* Add margin between buttons */
+}
+
+h2 {
+  display: inline-block; /* Allow the phonetic to be placed next to it */
+  margin-right: 10px; /* Add some space between the word and phonetic */
+  font-size: 1.8rem;
+}
+.wordContent {
+  margin: 10px;
+}
+
+.phonetic {
+  display: inline-block; /* Allow the phonetic to be placed next to h2 */
+}
+
+a.essential-500 {
+  color: inherit; /* Inherit the color from the surrounding text */
+  text-decoration: underline;
+  text-decoration-color: LightPink;
+  text-decoration-style: dotted;
+}
+.r500 {
+  background-color: LightPink;
+}
+
+a.essential-1000 {
+  color: inherit; /* Inherit the color from the surrounding text */
+  text-decoration: underline;
+  text-decoration-color: HotPink;
+  text-decoration-style: dotted;
+}
+.r1000 {
+  background-color: HotPink;
+}
+
+a.essential-2000 {
+  color: inherit; /* Inherit the color from the surrounding text */
+  text-decoration: underline;
+  text-decoration-color: DeepPink;
+  text-decoration-style: dotted;
+}
+.r2000 {
+  background-color: DeepPink;
+}
+
+a.essential-4000 {
+  color: inherit; /* Inherit the color from the surrounding text */
+  text-decoration: underline;
+  text-decoration-color: PaleVioletRed;
+  text-decoration-style: dotted;
+}
+.r4000 {
+  background-color: PaleVioletRed;
+}
+
+a.moreThan4000 {
+  color: inherit; /* Inherit the color from the surrounding text */
+  text-decoration: none;
+}
+.d-prefix {
+  display: inline; /* Or inline */
+  background-color: #f0f0e0; /* Soft color */
+  cursor: pointer; /* Indicate that it's clickable */
+  margin-right: 10px; /* Add some space between the prefix and the definition */
+}
