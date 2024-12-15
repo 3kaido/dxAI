@@ -10,11 +10,12 @@ This webapp is a reflection of my experience, to let users read and listen right
 - translation HINT is from Gemini-Nano
 - It is MULTI LINGUAL... good for Japanese, Chinese, Spanish learners of English! (more language would come as Gemini evolves)
 
-## How it works
+## How it works - and Enabling local AI functionalities
 - Javascript by Gemini
 - Translation to 100 languages = Gemini Nano, embeded on Chrome
 - Regeneration of annother example sentense, based on the word's definition = Gemini Nano, embeded on Chrome
 - Please go `chrome://flags/#translation-api` and enable
+- Please go `chrome://flags/#prompt-api-for-gemini-nano` and enable
 - Please go `chrome://flags/#optimization-guide-on-device-model` and enable
 
 ## How we built it
