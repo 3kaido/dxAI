@@ -276,25 +276,29 @@ langSelector.addEventListener('change', async () => {
 
 init();
 async function init() {
-  if ('createTranslator' in self.translation) {
-    //Init Translator
-    try {
-      translator = await self.translation.createTranslator({
-        sourceLanguage: 'en',
-        targetLanguage: getLanguageFromURL()
-      });
-    } catch (err) {
-      console.error(err.name, err.message);
+  try {
+    // Init Translator Try
+    if ('createTranslator' in self.translation) {
+        translator = await self.translation.createTranslator({
+          sourceLanguage: 'en',
+          targetLanguage: getLanguageFromURL()
+        });
     }
+  } catch (err) {
+    console.error(err.name, err.message);
   }
-  //Init prompt API.
+
+  try {
+  //Init prompt API. Try
   if (ai.languageModel) {
     prompter = await ai.languageModel.create({
       systemPrompt: "You are a kind, Junior highschool level English teacher."
     });
-  
   }
-
+  } catch (err) {
+    console.error(err.name, err.message);
+  }
+  //Page Init others
   const wordFromURL = getWordFromURL();
   const langFromURL = getLanguageFromURL();
   document.getElementById('langSelector').value = langFromURL;
