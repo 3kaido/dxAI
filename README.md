@@ -1,5 +1,10 @@
-# Try DXionally A.I. here! http://nanyogk.github.io/dxAI/index.html
+# Try DXionally A.I. here! -> http://nanyogk.github.io/dxAI/
 
+## The name
+- A dictionary, obviously
+- with DX, digital transformation
+- with A.I., Artificial Intelligence, Gemini Nano inside (in chrome)
+  
 ## Inspiration
 I learned my English - at my highschool age - by reading English dictionary each every entry.
 This webapp is a reflection of my experience, to let users read and listen right sentenses - to remember a new word.
